@@ -1,7 +1,9 @@
 @charset "utf-8";
 body {
     background-color: #eeeeee;
-    width: 980px;
+}
+div {
+    max-width: 980px;
     margin: 0 auto;
 }
 h2 {
@@ -16,37 +18,30 @@ h2 {
     justify-content: space-between;
 }
 .wrap {
-    margin: 10px;
+    width: 30%;
+    margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
 }
 h3 {
+    font-size: 20px;
     color: rgb(35, 130, 100);
     margin: 10px;
     padding: 5px;
     border-left: 10px solid rgb(35, 130, 100);
 }
 p {
-    margin: 10px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 400px) {
     .service {
         display: block;
+        margin: 10px;
     }
     img {
         width: 100%;
     }
-    h2 {
-        font-size: 60px;
-        padding: 120px;
-    }
     .wrap {
-        margin: 30px;
-    }
-    h3 {
-        font-size: 50px;
-    }
-    p {
-        font-size: 40px;
+        width: 100%;
     }
 }
