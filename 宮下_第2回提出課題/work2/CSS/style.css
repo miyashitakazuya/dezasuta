@@ -80,7 +80,6 @@ li + li {
     }
 
     li {
-        max-width: 767px;
         padding: 10px;
         border-bottom: 1px solid #000;
         text-align: left;
