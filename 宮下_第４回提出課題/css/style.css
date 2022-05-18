@@ -99,7 +99,7 @@ h3 > img {
 h2 {
     font-size: 82px;
     font-weight: normal;
-    line-height: 117%;
+    line-height: 1.17;
     letter-spacing: 0.1em;
     padding: 60px 0;
 }
@@ -109,12 +109,13 @@ h2 {
 }
 .policy {
     font-size: 23px;
-    line-height: 165%;
+    line-height: 1.65;
 }
 /* about us */
 .about_wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 105px;
 }
 .about-img {
@@ -128,12 +129,12 @@ h2 {
 }
 .about-us {
     font-size: 44px;
-    line-height: 138%;
+    line-height: 1.38;
     padding-top: 60px;
 }
 .about-service {
     font-size: 16px;
-    line-height: 162%;
+    line-height: 1.62;
     padding: 40px 0;
 }
 /* menu */
@@ -161,6 +162,7 @@ h2 {
 .menu-contents p {
     font-size: 17px;
     text-align: left;
+    line-height: 1.23;
     margin-top: 30px;
 }
 /* イベント */
@@ -170,12 +172,10 @@ h2 {
     background: #fff;
     padding: 25px 0 25px 16%;
 }
-.event_wrap ul div {
-    display: flex;
-    padding: 15px;
-}
 .event_wrap ul li {
+    padding: 15px;
     font-size: 23px;
+    text-align: left;
 }
 .topics {
     padding-left: 60px;
@@ -204,9 +204,12 @@ footer {
 }
 .detailes {
     font-size: 20px;
-    line-height: 195%;
     margin-left: 7%;
     text-align: left;
+}
+.detailes li {
+    padding: 10px;
+    margin-bottom: 5px;
 }
 .copylite {
     font-size: 16px;
