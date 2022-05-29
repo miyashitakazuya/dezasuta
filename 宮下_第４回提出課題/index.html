@@ -8,12 +8,14 @@
     <title>カフェサイト</title>
     <meta name="description" content="カフェのサイトです">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="header_wrap">
-            <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="デザインカフェ"></h1>
+            <h1 class="header_logo"><a href="index.html"><img src="images/design_cafe_logo_header@2x.png"
+                        alt="デザインカフェ"></a></h1>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
@@ -23,22 +25,42 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+
         </div>
-        <ul class="slider">
-            <li><img src="images/pc_first-100.jpg" alt="ヘッダー画像①"></li>
+        <ul id="top" class="slider">
+            <li>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="ヘッダー画像①">
+                </picture>
+            </li>
         </ul>
     </header>
     <div class="main-title_wrap home-contents">
         <p class="catchcopy">Have a happy day From a cup of coffee.</p>
         <h2 class="main-title">ハッピーに溢れる1日を<br>
-            杯のコーヒーから。</h2>
+            1杯のコーヒーから。</h2>
         <p class="policy">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
             足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
     </div>
     <div id="about" class="about_wrap home-contents">
-        <img class="about-img" src="images/pc_about-100.jpg" alt="about_us">
+        <h3 class="about-title-sp"><img src="images/about_us@2x.png" alt="about-title"></h3>
+        <picture>
+            <source srcset="images/about_us@2x-100.jpg" media="(max-width:767px)">
+            <img class="about-img" src="images/pc_about-100.jpg" alt="about_us">
+        </picture>
         <div class="about-contents">
-            <h3 class="sub-title"><img src="images/about_us@2x.png" alt="about-title"></h3>
+            <h3 class="about-title-pc"><img src="images/about_us@2x.png" alt="about-title"></h3>
             <p class="about-us">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="about-service">
                 サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -49,17 +71,25 @@
         <h3 class="sub-title"><img src="images/menu@2x.png" alt="menu-title"></h3>
         <div class="menu-container">
             <div class="menu-contents">
-                <img class="menu-img" src="images/pc_menu_drink-100.jpg" alt="drink">
+                <picture>
+                    <source srcset="images/drink_sp@2x-100.jpg" media="(max-width:767px)">
+                    <img class="menu-img" src="images/pc_menu_drink-100.jpg" alt="drink">
+                </picture>
                 <h4 class="menu-title">Drink</h4>
                 <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu-contents">
-                <img class="menu-img" src="images/pc_menu_food-100.jpg" alt="food">
+                <picture>
+                    <source srcset="images/food_sp@2x-100.jpg" media="(max-width:767px)">
+                    <img class="menu-img" src="images/pc_menu_food-100.jpg" alt="food">
+                </picture>
                 <h4 class="menu-title">Food</h4>
                 <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu-contents">
+                <source srcset="images/cake_sp@2x-100.jpg" media="(max-width:767px)">
                 <img class="menu-img" src="images/pc_menu_sweets-100.jpg" alt="sweets">
+                </picture>
                 <h4 class="menu-title">Sweets</h4>
                 <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
@@ -68,9 +98,9 @@
     <div id="event" class="event_wrap home-contents">
         <h3 class="sub-title"><img src="images/event@2x.png" alt="event-title"></h3>
         <ul class="event-contents">
-            <li>2020.06.23<span class="topics">7月はイベント出店のため0/0お休みします</span></li>
-            <li>2020.03.15<span class="topics">春の新商品新発売。話題のあのブランドとコラボ</span></li>
-            <li>2020.02.06<span class="topics">コーヒーの日で30%OFFイベントを開催[3日間限定]</span></li>
+            <li><a href="">2020.06.23<span class="topics">7月はイベント出店のため0/0お休みします</span></a></li>
+            <li><a href="">2020.03.15<span class="topics">春の新商品新発売。話題のあのブランドとコラボ</span></a></li>
+            <li><a href="">2020.02.06<span class="topics">コーヒーの日で30%OFFイベントを開催[3日間限定]</span></a></li>
         </ul>
     </div>
     <div id="access" class="access_wrap home-contents">
@@ -80,7 +110,7 @@
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6478.919211215211!2d139.76927927591757!3d35.714913631844674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5LiK6YeO5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1652807560893!5m2!1sja!2sjp"
         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="top-btn">
-        <a href="index.html"><img src="images/to_top@2x.png" alt="top-btn"></a>
+        <a href="#top"><img src="images/to_top@2x.png" alt="top-btn"></a>
     </div>
     <footer>
         <div class="shop-data home-contents">
@@ -95,6 +125,41 @@
         <p class="copylite"><small>&copy; 2021 DESIGN CAFE</small> </p>
     </footer>
 
+    <script>
+        // スマホ版メニュー表示
+        $(function () {
+            $('.sp_btn').click(function () {
+                $('.sp_nav').fadeToggle();
+                $(this).toggleClass('open');
+            });
+        });
+        $(".sp_nav ul a").on("click", function () {
+            $(".sp_nav").fadeToggle();
+            $('.sp_btn').removeClass("open");
+        })
+        // headerをスクロールすると、色が変わる
+        jQuery(window).on('scroll', function () {
+            if (jQuery('.slider').height() < jQuery(this).scrollTop()) {
+                jQuery('.header_wrap').addClass('change-color');
+            } else {
+                jQuery('.header_wrap').removeClass('change-color');
+            }
+        });
+        // スムーズスクロール
+        $(function () {
+            $('a[href^="#"]').click(function () {
+                var adjust = -70;
+                var speed = 400;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top + adjust;
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
