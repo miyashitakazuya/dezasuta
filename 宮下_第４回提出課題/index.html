@@ -50,8 +50,8 @@
         <p class="catchcopy">Have a happy day From a cup of coffee.</p>
         <h2 class="main-title">ハッピーに溢れる1日を<br>
             1杯のコーヒーから。</h2>
-        <p class="policy">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-            足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+        <p class="policy">毎日を丁寧に大切に過ごしたい。<br class="br_sp">だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+            足を運んでくれるお客さんには落ち着く空間と<br class="br_sp">こだわりのコーヒーを提供したい。</p>
     </div>
     <div id="about" class="about_wrap home-contents">
         <h3 class="about-title-sp"><img src="images/about_us@2x.png" alt="about-title"></h3>
@@ -87,8 +87,9 @@
                 <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu-contents">
-                <source srcset="images/cake_sp@2x-100.jpg" media="(max-width:767px)">
-                <img class="menu-img" src="images/pc_menu_sweets-100.jpg" alt="sweets">
+                <picture>
+                    <source srcset="images/cake_sp@2x-100.jpg" media="(max-width:767px)">
+                    <img class="menu-img" src="images/pc_menu_sweets-100.jpg" alt="sweets">
                 </picture>
                 <h4 class="menu-title">Sweets</h4>
                 <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -138,11 +139,11 @@
             $('.sp_btn').removeClass("open");
         })
         // headerをスクロールすると、色が変わる
-        jQuery(window).on('scroll', function () {
-            if (jQuery('.slider').height() < jQuery(this).scrollTop()) {
-                jQuery('.header_wrap').addClass('change-color');
+        $(window).on('scroll', function () {
+            if ($('.slider').height() < $(this).scrollTop()) {
+                $('.header_wrap').addClass('change-color');
             } else {
-                jQuery('.header_wrap').removeClass('change-color');
+                $('.header_wrap').removeClass('change-color');
             }
         });
         // スムーズスクロール

@@ -72,6 +72,7 @@ h3 > img {
     box-sizing: border-box;
     position: fixed;
     transition: background-color 0.5s, color 0.5s;
+    z-index: 80;
 }
 .header_logo {
     width: 226.76px;
@@ -122,6 +123,9 @@ h2 {
 .policy {
     font-size: 23px;
     line-height: 1.65;
+}
+.br_sp {
+    display: none;
 }
 /* about us */
 .about-title-sp {
@@ -345,16 +349,24 @@ footer {
 
 /* スマホ版 */
 @media screen and (max-width: 767px) {
+    .header_logo {
+        width: 187.51px;
+    }
+
+    h3 > img {
+        height: 45px;
+    }
     /* メインタイトル */
     .main-title_wrap {
         margin: 50px auto;
     }
+    .main-title {
+        font-size: 9.5vw;
+    }
+
     h2 {
         font-size: 50vw;
-        font-weight: normal;
-        line-height: 1.17;
         letter-spacing: 0.02em;
-        padding: 60px 0;
     }
     .catchcopy {
         font-size: 4vw;
@@ -363,6 +375,10 @@ footer {
         font-size: 16px;
         line-height: 1.87;
     }
+    .br_sp {
+        display: block;
+    }
+
     /* about us */
     .about-title-sp {
         display: block;
@@ -427,6 +443,9 @@ footer {
         line-height: 1.58;
     }
     .topics {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         padding-left: 0;
     }
     .event-contents span {
@@ -437,27 +456,18 @@ footer {
         margin-bottom: 0px;
         margin: 10px;
     }
-
-    .shop-data {
-        flex-direction: column;
-        padding: 80px 10px;
-        color: #000;
+    .map {
+        height: 190px;
     }
 
     /* フッター */
     .shop-data {
         display: block;
         padding: 45px 10px;
-        color: #000;
     }
     .detailes {
         font-size: 18px;
         margin-left: 0;
-        text-align: left;
-    }
-    .detailes li {
-        padding: 10px;
-        margin-bottom: 5px;
     }
     .copylite {
         padding-bottom: 30px;
